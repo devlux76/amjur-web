@@ -4,6 +4,7 @@
 - Supabase backend is fully mapped: "api" schema (profiles, education, experience, skills, blog_posts, membership, collaborations, documents, forum, amendments, etc.) and "auth" schema (users, SSO, MFA, sessions, tokens, audit logs).
 - Relationships and constraints are documented in DESIGN.md.
 - Authentication supports password, magic link, SSO, MFA, and RLS.
+- Research on Svelte 5, TailwindCSS4, authentication, and integration best practices is complete (see TODO.md and PLAN.md for summary).
 
 ## Issues / Gaps
 - UI/UX and Svelte SPA implementation not started.
@@ -19,3 +20,7 @@
 - Enforce RLS and privacy controls in UI.
 - Add real-time features for forum, documents, and collaborations.
 - Prioritize accessibility and professional branding.
+
+---
+
+**Research on Svelte 5, TailwindCSS4, authentication, and integration is complete and incorporated into project planning.**

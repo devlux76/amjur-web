@@ -1,5 +1,7 @@
 # amjur.org Svelte + TailwindCSS4 SPA — Design Overview
 
+> **Note:** Research on Svelte 5, TailwindCSS4, authentication, and integration best practices is complete. See TODO.md for summary and PLAN.md for implementation alignment.
+
 ## 1. Current Supabase Schema & Capabilities
 
 ### Schemas

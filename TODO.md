@@ -2,7 +2,7 @@
 
 ## Immediate Tasks
 - [x] Set up Svelte + TailwindCSS4 SPA boilerplate.
-- [x] Research and document Svelte 5, TailwindCSS4, authentication, and integration best practices (June 2025).
+- [x] Research and document Svelte 5, TailwindCSS4, authentication, and integration best practices (June 2025). **(Research complete and findings incorporated into ISSUE.md, PLAN.md, and DESIGN.md)**
 - [ ] Integrate Supabase client and environment configuration.
 - [ ] Implement Supabase Auth (password, magic link, SSO, MFA).
 - [ ] Create Svelte stores for auth, user, and notifications.

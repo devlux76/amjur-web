@@ -5,6 +5,7 @@
 - Integrate Supabase client and configure environment.
 - Implement authentication (Supabase Auth, SSO, MFA).
 - Establish global state management (Svelte stores).
+- **Research on Svelte 5, TailwindCSS4, authentication, and integration best practices is complete. See TODO.md for summary.**
 
 ## Phase 2: Core Features
 - Profile management: CRUD for profiles, education, experience, skills.
@@ -29,4 +30,4 @@
 
 ---
 
-**See DESIGN.md for schema details and UI/UX recommendations.**
+**Research phase is complete. See DESIGN.md for schema details, UI/UX recommendations, and TODO.md for best practices summary.**
