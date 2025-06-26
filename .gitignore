@@ -1,0 +1,9 @@
+node_modules
+.svelte-kit
+package-lock.json
+dist
+.env
+.vscode
+.DS_Store
+*.log
+*.svelte
