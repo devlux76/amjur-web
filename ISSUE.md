@@ -1,26 +1,20 @@
-# amjur.org SPA — Current Issues & Next Steps
+### Tailwind CSS 4 and PostCSS Integration Error
 
-## Current State
-- Supabase backend is fully mapped: "api" schema (profiles, education, experience, skills, blog_posts, membership, collaborations, documents, forum, amendments, etc.) and "auth" schema (users, SSO, MFA, sessions, tokens, audit logs).
-- Relationships and constraints are documented in DESIGN.md.
-- Authentication supports password, magic link, SSO, MFA, and RLS.
-- Research on Svelte 5, TailwindCSS4, authentication, and integration best practices is complete (see TODO.md and PLAN.md for summary).
+**Description:**
+The development server is failing to start due to an incompatibility with how Tailwind CSS is integrated with PostCSS. The error indicates that `tailwindcss` is being used directly as a PostCSS plugin, which is no longer the correct approach for Tailwind CSS v4. The solution involves updating the project to use `@tailwindcss/vite` and removing direct PostCSS configuration for Tailwind.
 
-## Issues / Gaps
-- UI/UX and Svelte SPA implementation not started.
-- No user onboarding or profile completion flows implemented.
-- Role-based dashboards and RLS enforcement need to be built into the frontend.
-- Real-time collaboration and notifications not yet implemented.
-- Accessibility and privacy controls need to be enforced in UI.
+**Error Message:**
+```
+[postcss] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+```
 
-## Next Steps
-- Implement Svelte SPA structure as outlined in DESIGN.md.
-- Build onboarding and profile flows.
-- Integrate Supabase Auth (SSO, MFA, session management).
-- Enforce RLS and privacy controls in UI.
-- Add real-time features for forum, documents, and collaborations.
-- Prioritize accessibility and professional branding.
+**Impact:**
+The application cannot be run in development mode, hindering further development and testing.
 
----
-
-**Research on Svelte 5, TailwindCSS4, authentication, and integration is complete and incorporated into project planning.**
+**Proposed Solution (based on Google search for "Setting Sveltekit 5 with Tailwind 4"):**
+1. Remove `postcss` and `autoprefixer` dependencies from `package.json`.
+2. Update existing packages and install new Tailwind libraries: `bun install` and `bun install tailwindcss @tailwindcss/vite`.
+3. Update `vite.config.ts` to include `@tailwindcss/vite` plugin.
+4. Update `src/app.css` to `@import "tailwindcss";`.
+5. Remove any `<style lang="postcss">` tags in Svelte components.
+6. Note that the `@apply` directive will no longer be supported.
